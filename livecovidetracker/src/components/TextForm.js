@@ -54,7 +54,7 @@ const[text,setText]=useState("");
   <textarea className="form-control " value={text} onChange={handleOnChange} 
   style={{backgroundColor: props.mode ==='dark'?'grey':'white',color:props.mode ==='dark'?'white':'black'}}id="exampleFormControlTextarea1" rows="8"></textarea>
 </div>
-<button className="btn btn-primary mx-1" onClick={handleUpclick}>Convert to Uppercase</button>
+<button className="btn btn-primary mx-1" onClick={handleUpclick}>Convert to Uppercase1</button>
 <button className="btn btn-primary mx-1" onClick={handleLowclick}>Convert to lowercase</button>
 <button className="btn btn-primary mx-1" onClick={handleClearclick}>clear text</button>
 <button className="btn btn-primary mx-1" onClick={titleCaseHandler}>Title Case</button>
