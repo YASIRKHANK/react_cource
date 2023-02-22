@@ -21,21 +21,21 @@ function App() {
       (
         {
           msg:message,
-          type: type
+          type:type
         }     
       )
     
   }
   setTimeout(() => {
     setAlert(null);
-  }, 1000);
+  }, 2000);
   const toggleMode =()=>{
     if(mode === 'light')
     {
       setMode('dark')
       document.body.style.backgroundColor='#08254f';
       showAlert("Dark mode is enable","success")
-      document.title='textutlis , Darkmode';
+      // document.title='textutlis , Darkmode';
 
     }
     else{
@@ -52,12 +52,12 @@ function App() {
    <Alert alert={alert}/>
    <div className="container">
    <BrowserRouter>
-  <Routes>
-          <Route path="/" element={<TextForm heading="Enter the text to analyse: " mode={mode}/>} />       
-          < Route path="/about" element={<About/>} />
+   <Routes>
+           <Route path="/" element={<TextForm heading="Try Textutils-word counter, character counter , remove extra spaces: " mode={mode} showAlert={showAlert}/>} />       
+           < Route path="/about" element={<About mode={mode}/>} />
             {/* element= {<TextForm heading="Enter the text to analyse: " mode={mode}/>} />  */}
     </Routes>
-     </BrowserRouter>
+    </BrowserRouter> 
    </div>
   </>
   );
