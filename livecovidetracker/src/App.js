@@ -5,8 +5,9 @@ import TextForm from './components/TextForm';
 import React , {useState} from 'react';
 import Alert from './components/Alert';
 
+
 import {
-  BrowserRouter,
+  
   Routes,
   Route,
   // Link
@@ -51,13 +52,13 @@ function App() {
    {/* {<Navbar/>} */}
    <Alert alert={alert}/>
    <div className="container">
-   <BrowserRouter>
+   
    <Routes>
            <Route path="/" element={<TextForm heading="Try Textutils-word counter, character counter , remove extra spaces: " mode={mode} showAlert={showAlert}/>} />       
            < Route path="/about" element={<About mode={mode}/>} />
             {/* element= {<TextForm heading="Enter the text to analyse: " mode={mode}/>} />  */}
     </Routes>
-    </BrowserRouter> 
+    
    </div>
   </>
   );

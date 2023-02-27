@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 // import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { Link } from 'react-router-dom';
 // import NavDropdown from 'react-bootstrap/NavDropdown';
 // import PropTypes from 'prop-types'
 
@@ -16,12 +17,12 @@ function nav(props) {
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
-            className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: '100px' }}
+            className="me-auto my-2 my-lg-0 "
+            style={{ maxHeight: '100px'}}
             navbarScroll
           >
-            <Nav.Link href="/" >Home</Nav.Link>
-            <Nav.Link href="about">{props.name}</Nav.Link>
+            <Link to="/" className='mx-2 ' >Home</Link>
+            <Link to="about">{props.name}</Link>
             {/* <NavDropdown title="Link" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
